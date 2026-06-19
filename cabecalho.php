@@ -25,7 +25,7 @@
 <h1>Vitrine Virtual</h1>
 
 <nav>
-    <a href="/projetoVitrine/index.php">Início </a>
+    <a href="/projetoVitrine/index.php">Início</a>
     <a href="/projetoVitrine/pesquisar.php">Pesquisar</a>
     <a href="/projetoVitrine/login.php">Login</a>
 </nav>

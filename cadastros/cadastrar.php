@@ -6,6 +6,15 @@
 
 <!-- COMEÇAR FORMULÁRIO ANA JULIA --> 
 <!-- BORA PRA CIMA -->
+<label>Categoria:</label>
+
+<select>
+    <option> Selecione uma categoria</option>
+    <option>Bebidas</option>
+    <option>Lanches</option>
+    <option>Porções</option>
+</select>
+
 <form>
     <label>Nome</label>
     <input></input><br>

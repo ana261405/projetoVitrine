@@ -2,6 +2,19 @@
 
 <h2>Bem vindo a página de login</h2>
 
+<form>
+    <label>Nome</label>
+    <input></input><br>
+    <label>Email</label>
+    <input></input><br>
+    <label>Senha</label>
+    <input></input><br>
+    <button type="submit">Login</button>
+   
+</form> 
+
+<hr> 
+
 <!-- caso não esteja logado tem que ter uma condição aqui -->
 <nav> 
     <p> <a href="cadastros/cadastrar.php">Cadastrar</a> </p> 
