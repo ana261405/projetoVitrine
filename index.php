@@ -1,10 +1,10 @@
-<?php include "cabecalho.php"; ?>
+<?php include "/html/cabecalho.php"; ?>
 
 <h2>Itens da vitrine</h2>
 
 <?php
-include "produtos/bebidas.php";
+include "/produtos/bebidas.php";
 ?>
 
 
-<?php include "rodape.php"; ?>
+<?php include "/html/rodape.php"; ?>

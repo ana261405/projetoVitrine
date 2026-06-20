@@ -1,11 +1,9 @@
-<?php include "../cabecalho.php"; ?>
+<?php include "/html/cabecalho.php"; ?>
 
 <h2>Bem vindo a página de cadastro</h2>
 
 <!-- caso não esteja logado tem que ter uma condição aqui -->
 
-<!-- COMEÇAR FORMULÁRIO ANA JULIA --> 
-<!-- BORA PRA CIMA -->
 <label>Categoria:</label>
 
 <select>
@@ -26,4 +24,4 @@
    
 </form> 
 
-<?php include "../rodape.php"; ?>
+<?php include "/html/rodape.php"; ?>
