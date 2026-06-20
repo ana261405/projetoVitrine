@@ -10,7 +10,8 @@ class Bebida extends Produto{
 
     public function __construct($nome, $preco, $descricao, 
                     $volume, $recipiente, $imagem){
-        Parent::__construct($nome, $preco, $descricao);
+        Parent::__construct($nome, $preco, $descricao, 2);
+        //eu herdo o construtor do pai porém já coloco a categoria 2 sem a necessidade de incluir esse id depois 
         $this->volume = $volume;
         $this->recipiente = $recipiente;
         $this->imagem = $imagem; 
