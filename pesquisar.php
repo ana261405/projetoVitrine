@@ -1,4 +1,4 @@
-<?php include "cabecalho.php"; ?>
+<?php include "html/cabecalho.php"; ?>
 
 <h2>Bem vindo a página de Pesquisas</h2>
 
@@ -6,4 +6,4 @@
 
 
 
-<?php include "rodape.php"; ?>
+<?php include "html/rodape.php"; ?>

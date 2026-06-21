@@ -1,4 +1,4 @@
-<?php include "cabecalho.php"; ?>
+<?php include "html/cabecalho.php"; ?>
 
 <h2>Bem vindo a página de login</h2>
 
@@ -17,7 +17,7 @@
 
 <!-- caso não esteja logado tem que ter uma condição aqui -->
 <nav> 
-    <p> <a href="/cadastro/cadastrar.php">Cadastrar</a> </p> 
+    <p> <a href="cadastro/cadastrar.php">Cadastrar</a> </p> 
     <p> <a href=" ">Editar</a> </p> 
     <p> <a href=" ">Excluir</a> </p> 
     <p> <a href="index.php">Visualizar Todos</a> </p> 
@@ -25,4 +25,4 @@
 
 
 
-<?php include "rodape.php"; ?>
+<?php include "html/rodape.php"; ?>

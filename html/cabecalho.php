@@ -18,6 +18,9 @@
     main {
         flex: 1;
     }
+    #campoBebida{
+    display:none;
+}
     </style>
 </head>
 <body>
