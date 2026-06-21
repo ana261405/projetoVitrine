@@ -17,7 +17,7 @@ class Bebida extends Produto{
 
     public function imprimir(){
         echo "<div class='produto'>" . 
-            //eu tenho que adicinar a categoria dele *!!!*
+            "<h3>Bebida</h3> <br> " .
             "<h3> $this->nome </h3> <br> " . 
             "$this->descricao <br>" .
             "Preço: R$ $this->preco <br>".

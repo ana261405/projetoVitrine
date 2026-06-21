@@ -13,12 +13,24 @@ class Produto{
     }
 
     public function imprimir(){
-        echo "<div class='produto'>" . 
-            //adicionar a cateogira do produto
-            "<h3> $this->nome </h3> <br> " . 
-            "$this->descricao <br>" .
-            "Preço: R$ $this->preco <br>".
-           
-        "</div>";
-    }
+
+        $categoria = "";
+
+        if($this->categoriaID == 1){
+            $categoria = "<h3>Lanche</h3><br>";
+        }else if($this->categoriaID == 3){
+            $categoria = "<h3>Porção</h3><br>";
+        }
+
+        echo "<div class='produto'>
+                $categoria
+                <h3>$this->nome</h3><br>
+                $this->descricao<br>
+                Preço: R$ $this->preco<br>
+            </div>";
+    }   
+    // public function salvar(){
+
+    // }
+
 }
