@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UFT-8">
     <title>Vitrine Virtual</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
     <style> 
+    h1{
+        font-family: monospace;
+        font-size: 12pt;
+        color: black;
+    }
     html, body {
-    height: 100%;
-    margin: 0;
+        height: 100%;
+        margin: 0;
     }
 
     body {
@@ -21,7 +28,9 @@
     #campoBebida{
     display:none;
 }
+   
     </style>
+
 </head>
 <body>
 
@@ -33,6 +42,7 @@
     <a href="/projetoVitrine/login.php">Login</a>
 </nav>
 
-<hr>
+
 <br>
-<main> 
+<hr>
+<main>

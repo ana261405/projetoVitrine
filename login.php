@@ -1,8 +1,7 @@
 <?php include "html/cabecalho.php"; ?>
-
 <h2>Bem vindo a página de login</h2>
 
-<form>
+<form class="login">
     <label>Nome</label>
     <input></input><br>
     <label>Email</label>
