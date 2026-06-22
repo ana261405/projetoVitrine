@@ -1,4 +1,6 @@
 <?php 
+// require_once("../conexaoBanco.php")
+
 class Produto{
     protected  $preco, $descricao, $id, $nome, $imagem, $categoriaId;
 
@@ -16,9 +18,9 @@ class Produto{
 
         $categoria = "";
 
-        if($this->categoriaID == 1){
+        if($this->categoriaId == 1){
             $categoria = "<h3>Lanche</h3><br>";
-        }else if($this->categoriaID == 3){
+        }else if($this->categoriaId == 3){
             $categoria = "<h3>Porção</h3><br>";
         }
 
@@ -29,8 +31,9 @@ class Produto{
                 Preço: R$ $this->preco<br>
             </div>";
     }   
-    // public function salvar(){
+    //  public function salvar(){
+    //     $banco = new ConexaoBanco();
 
-    // }
+    //  }
 
 }

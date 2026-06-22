@@ -3,11 +3,6 @@
 <head>
     <title>Vitrine Virtual</title>
     <style> 
-    h1{
-        font-family: monospace;
-        font-size: 12pt;
-        color: black;
-    }
     html, body {
     height: 100%;
     margin: 0;

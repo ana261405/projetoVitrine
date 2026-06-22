@@ -13,7 +13,7 @@ function validarCategoria(){
 }
 
 function validarForm(){
-    console.log("Entrou na função");
+
     const categoria = document.getElementById("categoria");
     const nome = document.getElementById("nome");
     const preco = document.getElementById("preco");
@@ -31,12 +31,11 @@ function validarForm(){
         nome.value == "" || 
         preco.value == "" || 
         descricao.value == "" || 
-        imagem.value ==0 )
+        imagem.value == "" )
     {
          alert("Todos os campos devem ser preenchidos!!!");
-        
-    }else{
-        alert("Cadastro enviado!"); 
-     
+         return false;
     }
+
+    return true;
 }

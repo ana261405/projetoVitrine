@@ -8,7 +8,7 @@ require_once 'Produto.php';
 class Bebida extends Produto{
     private $volume, $recipiente; 
 
-    public function __construct($nome, $preco, $descricao, $imagem, $volume, $recipiente){
+    public function __construct($nome, $preco, $descricao, $imagem, $categoriaId, $volume, $recipiente){
         Parent::__construct($nome, $preco, $descricao,  $imagem, 2);
         //eu herdo o construtor do pai porém já coloco a categoria 2 sem a necessidade de incluir esse id depois 
         $this->volume = $volume;
