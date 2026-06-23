@@ -4,7 +4,7 @@
 <!-- caso não esteja logado tem que ter uma condição aqui *!!!* -->
 
 <!-- ao submeter esse form os campos vão seer validados -->
-<form action="processaDados.php" method="post"  id="cadastro" onsubmit="return validarForm()">
+<form action="processaDados.php" method="post"  id="cadastro" onsubmit="return validarForm()" enctype="multipart/form-data">
 
 <!-- essa label esta vinculada ao select com o id categoria -->
 <label for="categoria">Categoria:</label>

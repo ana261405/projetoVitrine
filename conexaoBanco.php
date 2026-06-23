@@ -1,7 +1,7 @@
 <?php
     class ConexaoBanco{
         
-        private  $DB_HOST = "localhost";
+        private $DB_HOST = "localhost";
         private $DB_USER = "root";
         private $DB_PASS = "";
         private $DB   = "projetoVitrine";

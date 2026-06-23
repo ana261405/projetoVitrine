@@ -26,6 +26,40 @@ class Bebida extends Produto{
            
         "</div>";
     }
+    public function salvar(){
+        $banco = new ConexaoBanco();
+
+        $nome = $this->nome;
+        $preco = $this->preco;
+        $descricao = $this->descricao; 
+        $imagem = $this->imagem; 
+        $categoriaId = $this->categoriaId;
+        $volume = $this->volume; 
+        $recipiente = $this->recipiente; 
+
+        $mensagem = ''; 
+        
+        $sql = "INSERT INTO produtos ( nome, descricao, preco, imagem, categoria)
+                VALUES ('$nome', '$descricao', '$preco', '$imagem', '$categoriaId')";
+
+       if($banco->query($sql)){
+            // pega o último id criado e faze a inserção da tabela relacional
+            $idProduto = mysqli_insert_id($banco->con);
+
+            //insere os dados restantes da bebida
+            $sqlBebida = "INSERT INTO bebida (idProduto, volume, recipiente)
+                        VALUES ('$idProduto', '$volume', '$recipiente')";
+
+            if($banco->query($sqlBebida)){
+               echo "Cadastro realizado com sucesso!"; 
+               //MEXER AQUI AGORA
+            }else{
+                echo "Erro ao cadastrar bebida: " . mysqli_error($banco->con);
+            }
+        }else{
+            echo "Erro ao cadastrar produto: " . mysqli_error($banco->con);
+        }
+    }        
 
 
 }

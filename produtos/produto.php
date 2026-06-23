@@ -1,12 +1,12 @@
 <?php 
-// require_once("../conexaoBanco.php")
+require_once("../conexaoBanco.php"); 
 
 class Produto{
-    protected  $preco, $descricao, $id, $nome, $imagem, $categoriaId;
+    protected  $preco, $descricao, $nome, $imagem, $categoriaId;
 
 
     public function __construct($nome, $preco, $descricao, $imagem, $categoriaId){
-        $this->id = rand();
+        
         $this->nome = $nome;
         $this->preco = $preco;
         $this->descricao = $descricao; 
@@ -29,11 +29,33 @@ class Produto{
                 <h3>$this->nome</h3><br>
                 $this->descricao<br>
                 Preço: R$ $this->preco<br>
+                <img src='../$this->imagem'> <br> 
             </div>";
     }   
-    //  public function salvar(){
-    //     $banco = new ConexaoBanco();
+    
 
-    //  }
+    public function salvar(){
+        $banco = new ConexaoBanco();
+
+        $nome = $this->nome;
+        $preco = $this->preco;
+        $descricao = $this->descricao; 
+        $imagem = $this->imagem; 
+        $categoriaId = $this->categoriaId;
+
+        $mensagem = ''; 
+        
+
+        $sql = "INSERT INTO produtos ( nome, descricao, preco, imagem, categoria)
+                VALUES ('$nome', '$descricao', '$preco', '$imagem', '$categoriaId')";
+
+        if($banco->query($sql)){
+            $mensagem= "Cadastro realizado!";
+            //colocar um redirecionamento aqui
+        }else{
+            echo "Erro ao cadastrar." . mysqli_error($banco->con);
+        }
+
+    }
 
 }
