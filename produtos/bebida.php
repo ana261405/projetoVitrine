@@ -43,7 +43,7 @@ class Bebida extends Produto{
                 VALUES ('$nome', '$descricao', '$preco', '$imagem', '$categoriaId')";
 
        if($banco->query($sql)){
-            // pega o último id criado e faze a inserção da tabela relacional
+            // pega o último id criado e faz a inserção da tabela de bebidas
             $idProduto = mysqli_insert_id($banco->con);
 
             //insere os dados restantes da bebida
@@ -51,8 +51,8 @@ class Bebida extends Produto{
                         VALUES ('$idProduto', '$volume', '$recipiente')";
 
             if($banco->query($sqlBebida)){
-               echo "Cadastro realizado com sucesso!"; 
-               //MEXER AQUI AGORA
+               echo "<script> alert('Cadastro realizado com sucesso!') </script>"; 
+               
             }else{
                 echo "Erro ao cadastrar bebida: " . mysqli_error($banco->con);
             }
@@ -60,6 +60,5 @@ class Bebida extends Produto{
             echo "Erro ao cadastrar produto: " . mysqli_error($banco->con);
         }
     }        
-
 
 }

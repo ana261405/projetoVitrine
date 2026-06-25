@@ -24,9 +24,16 @@ function validarForm(){
     if(categoria.value == 2){
         volume = document.getElementById("volume");
         recipiente = document.getElementById("recipiente");
-    }
 
-    if(
+        if(
+            volume.value == "" || recipiente.value == "")
+        {
+            alert("Todos os campos devem ser preenchidos!!!");
+            return false;
+        }
+
+        
+    }else if(
         categoria.value == "" ||
         nome.value == "" || 
         preco.value == "" || 
@@ -36,6 +43,6 @@ function validarForm(){
          alert("Todos os campos devem ser preenchidos!!!");
          return false;
     }
-
+    
     return true;
 }

@@ -3,9 +3,8 @@
 <h2>Bem vindo a página de cadastro</h2>
 <!-- caso não esteja logado tem que ter uma condição aqui *!!!* -->
 
-<!-- ao submeter esse form os campos vão seer validados -->
+<!-- ao submeter esse form os campos vão seer validados, também poderia ser utilizado required, não me atentei-->  
 <form action="processaDados.php" method="post"  id="cadastro" onsubmit="return validarForm()" enctype="multipart/form-data">
-
 <!-- essa label esta vinculada ao select com o id categoria -->
 <label for="categoria">Categoria:</label>
 <select id="categoria" name="categoria" onchange="validarCategoria()">
@@ -30,7 +29,7 @@
 <!-- caso seja uma bebiba tem que adicionar mais dois campos -->
 <div id= "campoBebida">
     <label>Volume:</label>
-    <input id="volume" name="volume" type="number" step="0.01" min="0" placeholder="Volume da bebida"></input><br>
+    <input id="volume" name="volume" type="number" step="0.01" min="0" placeholder="Volume da bebida em ml"></input><br>
     <label>Recipiente:</label>
     <input id="recipiente" name="recipiente" type="text" placeholder="Recipiente da bebida"></input><br>
 </div> 

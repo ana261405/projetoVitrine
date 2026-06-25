@@ -51,8 +51,14 @@ class Produto{
 
         if($banco->query($sql)){
             $mensagem= "Cadastro realizado!";
-            //colocar um redirecionamento aqui
+            echo "<script> alert('Cadastro realizado com sucesso!') </script>";
         }else{
+            
+             if (mysqli_errno($banco->con) == 1062) {
+                echo "Já existe um produto com esse nome.";
+            } else {
+                echo "Erro ao cadastrar: " . mysqli_error($banco->con);
+            }
             echo "Erro ao cadastrar." . mysqli_error($banco->con);
         }
 
