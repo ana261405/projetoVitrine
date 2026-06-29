@@ -1,0 +1,212 @@
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #6d3f2273;
+    color: rgba(255, 255, 255, 0.89);
+    font-family: Arial, Helvetica, sans-serif;
+    flex-direction: column;
+     min-height: 100vh;
+    text-align: center;
+}
+header{
+    display: flex;
+}
+nav{
+    background-color: rgba(0, 0, 0, 0.085);
+    color: white;
+    padding: 10px;
+}
+.login{
+    background-color: black;
+    color: white;
+    padding: 10px;
+    width: 100px;
+    text-align: center;
+    border-radius: 5px;
+}
+nav a{
+    color: white;
+    text-decoration: none;
+    margin-right: 10px;
+} */
+
+    h1{
+        
+        font-size: 12pt;
+        color: black;
+    }
+    html, body {
+        height: 100%;
+        margin: 0;
+    }
+
+   *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url("../imgs/logindois.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    justify-content: center;
+    background-color: #4a250e71;
+    color: rgba(255, 255, 255, 0.89);
+    font-family: "Poppins";
+    flex-direction: column;
+     min-height: 100vh;
+    text-align: center;
+}
+body.fundo-index{
+    background-image: url("../imgs/cinzabonito.jpg");
+    background-size: cover;
+    background-position: center;
+}
+body.fundo-cadastro{
+    background-image: url("../imgs/cinzabonito.jpg");
+    background-size: cover;
+    background-position: center;
+    background-color: gray;
+}
+button{
+    font-family: "Poppins";
+    background-color: rgba(204, 29, 29, 0.9);
+    color: rgba(255, 255, 255, 0.9);
+    padding: 8px 8px;
+    border-radius: 8px;
+    backdrop-filter: blur(20px);
+    text-align: center;
+    font-size: 12px;
+
+
+}
+header{
+    width: 100%;
+    display: flex;
+    padding: 4%;
+    justify-content: space-between;
+    align-items: center;
+
+    ul{
+        display: flex;
+        gap: 20px;
+        list-style-type: none;
+        background-color: rgba(255, 255, 255, 0.1);
+        color: rgba(255, 255, 255, 0.9);
+        padding: 16px 20px;
+        border-radius: 12px;
+        backdrop-filter: blur(20px);
+    }
+    a{
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.9);
+    }
+}
+nav{
+    background-color: rgba(0, 0, 0, 0.085);
+    color: white;
+    padding: 10px;
+}
+.login{
+    height: 18vh;
+    background-color: rgba(84, 76, 66, 0.9);
+    color: white;
+    padding: 12px 12px;
+    width: 300px;
+    margin: 0 auto;
+    border-radius: 6px;
+    justify-content: center;
+
+}
+.opcoes{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    height: 38vh;
+
+    a{
+        width: 10vw;
+        padding: 4px 8px;
+        
+        
+        display: inline-block;
+        margin: 4px;
+        font-size: 11px;
+    }
+}
+.cadastrar{
+    height: auto;
+    background-color: rgba(84, 76, 66, 0.9);
+    color: white;
+    padding: 12px 12px;
+    width: 300px;
+    margin: 0 auto;
+    border-radius: 6px;
+    justify-content: center;
+    
+
+    .cad-form{
+        width: 70%;
+        padding: 12px 12px;
+        box-sizing: border-box;
+        border-radius: 15px;
+        font-size: 14px;
+        margin: 0 auto;
+        gap: 5px;
+        
+        .textarea{
+            width: 100%;
+            border-radius: 5px;
+            box-sizing: border-box;
+            resize: vertical;
+            height: 100px;
+        }
+    }
+
+}
+.pesquisar{
+    max-width: 200px;
+    margin: 20px auto;
+    width: 90%;
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 16px 20px;
+    border-radius: 12px;
+    backdrop-filter: blur(30px);
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+
+    main {
+        flex: 1;
+    }
+    #campoBebida{
+    display:none;
+}
+footer{
+            margin: 2px;
+            padding: 2px; 
+            border: none;
+            background-color: rgba(189, 189, 189, 0.28);
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+}

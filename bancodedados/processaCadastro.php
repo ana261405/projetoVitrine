@@ -19,20 +19,20 @@ if(isset($_POST["nome"])){
         //esse print só serve para debug
         //print_r($_FILES);
         $nomeArquivo = basename($_FILES['imagem']['name']);
-        $destino = "../imgs/" .$nomeArquivo; 
+        $destino = "../uploads/" .$nomeArquivo; 
         //sempre considera a pasta na raiz do diretório 
         
 
-        //verifica se o diretorio 'imgs' existe; caso não, cria
-        if ( !file_exists('../imgs') || !is_dir('../imgs')){
-            mkdir('../imgs');
+        //verifica se o diretorio 'uploads' existe; caso não, cria
+        if ( !file_exists('../uploads') || !is_dir('../uploads')){
+            mkdir('../uploads');
         }
         
         //move o arquivo enviado
         move_uploaded_file($_FILES['imagem']['tmp_name'], $destino);
         
         //salva o caminho para ser armazenado no banco de dados
-        $imagemBanco = "imgs/" .$nomeArquivo;
+        $imagemBanco = "uploads/" .$nomeArquivo;
         //esse caminho vai ser utilizado para imprimir a imagem futuramente 
 
         if ($categoria == 2) {

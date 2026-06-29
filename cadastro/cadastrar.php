@@ -1,10 +1,11 @@
-<?php include "../html/cabecalho.php"; ?>
+<?php $bodyClass = "fundo-cadastro"; 
+include "../html/cabecalho.php"; ?>
 
 <h2>Bem vindo a página de cadastro</h2>
 <!-- caso não esteja logado tem que ter uma condição aqui *!!!* -->
 
 <!-- ao submeter esse form os campos vão seer validados, também poderia ser utilizado required, não me atentei-->  
-<form action="processaDados.php" method="post"  id="cadastro" onsubmit="return validarForm()" enctype="multipart/form-data">
+<form action="../bancodedados/processaCadastro.php" method="post"  id="cadastro" onsubmit="return validarForm()" enctype="multipart/form-data">
 <!-- essa label esta vinculada ao select com o id categoria -->
 <label for="categoria">Categoria:</label>
 <select id="categoria" name="categoria" onchange="validarCategoria()">
@@ -15,6 +16,7 @@
 </select>
 <!-- importante: a propriedade id é usada no js e a propriedade name é usada no php -->
 <br> 
+<div class= "cad-form">
 <label>Nome:</label>
 <input id="nome" name="nome" type="text" placeholder="Nome do produto"></input><br>
 <label>Descrição:</label>
@@ -25,6 +27,7 @@
 <label>Imagem:</label>
 <input id="imagem" name="imagem" type="file" accept="image/*"></input><br>
 <!-- aceita apenas imagens -->
+</div> 
 
 <!-- caso seja uma bebiba tem que adicionar mais dois campos -->
 <div id= "campoBebida">

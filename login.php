@@ -2,7 +2,7 @@
 
 <h2>Bem vindo a página de login</h2>
 
-<form>
+<form class="login">
     <label>Nome</label>
     <input></input><br>
     <label>Email</label>
@@ -16,11 +16,11 @@
 <hr> 
 
 <!-- caso não esteja logado tem que ter uma condição aqui -->
-<nav> 
-    <p> <a href="cadastro/cadastrar.php">Cadastrar</a> </p> 
-    <p> <a href=" ">Editar</a> </p> 
-    <p> <a href=" ">Excluir</a> </p> 
-    <p> <a href="index.php">Visualizar Todos</a> </p> 
+<nav class="opcoes"> 
+    <button> <a href="cadastro/cadastrar.php">Cadastrar</a> </button>    
+    <button> <a href=" ">Editar</a> </button>    
+    <button> <a href=" ">Excluir</a> </button>   
+    <button> <a href="index.php">Visualizar Todos</a> </button>  
 </nav>
 
 

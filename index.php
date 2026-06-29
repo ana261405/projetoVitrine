@@ -1,4 +1,5 @@
-<?php include "html/cabecalho.php"; ?>
+<?php $bodyClass ="fundo-index"; 
+include "html/cabecalho.php"; ?>
 
 <h2>Itens da vitrine</h2>
 

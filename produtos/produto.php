@@ -1,5 +1,5 @@
 <?php 
-require_once("../conexaoBanco.php"); 
+require_once("../bancodedados/conexaoBanco.php"); 
 
 class Produto{
     protected  $preco, $descricao, $nome, $imagem, $categoriaId;
@@ -51,6 +51,7 @@ class Produto{
 
         if($banco->query($sql)){
             $mensagem= "Cadastro realizado!";
+            //header("location:teste.php")
             echo "<script> alert('Cadastro realizado com sucesso!') </script>";
         }else{
             
