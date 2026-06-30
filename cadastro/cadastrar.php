@@ -1,11 +1,11 @@
 <?php $bodyClass = "fundo-cadastro"; 
 include "../html/cabecalho.php"; ?>
 
-<h2>Bem vindo a página de cadastro</h2>
+<h2 class= "bemvindo-cad">Bem vindo a página de cadastro</h2>
 <!-- caso não esteja logado tem que ter uma condição aqui *!!!* -->
 
 <!-- ao submeter esse form os campos vão seer validados, também poderia ser utilizado required, não me atentei-->  
-<form action="../bancodedados/processaCadastro.php" method="post"  id="cadastro" onsubmit="return validarForm()" enctype="multipart/form-data">
+<form action="../bancodedados/processaCadastro.php" method="post"  class="cadastrar" id="cadastro" onsubmit="return validarForm()" enctype="multipart/form-data">
 <!-- essa label esta vinculada ao select com o id categoria -->
 <label for="categoria">Categoria:</label>
 <select id="categoria" name="categoria" onchange="validarCategoria()">
@@ -20,7 +20,7 @@ include "../html/cabecalho.php"; ?>
 <label>Nome:</label>
 <input id="nome" name="nome" type="text" placeholder="Nome do produto"></input><br>
 <label>Descrição:</label>
-<input id="descricao" name ="descricao" type="text" placeholder="Descrição do produto"></input><br>
+<textarea id="descricao" name ="descricao" placeholder="Descrição do produto"></textarea><br>
 <!-- o preço pode ser inserido com casas decimais e pode ser no minimo 0 -->
 <label>Preço:</label>
 <input id="preco" name="preco" type="number" step="0.01" min="0" placeholder="Preço do produto"></input><br>

@@ -152,7 +152,7 @@ nav{
     margin: 0 auto;
     border-radius: 6px;
     justify-content: center;
-    
+}    
 
     .cad-form{
         width: 70%;
@@ -172,7 +172,7 @@ nav{
         }
     }
 
-}
+
 .pesquisar{
     max-width: 200px;
     margin: 20px auto;

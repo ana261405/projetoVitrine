@@ -13,7 +13,7 @@
    
 </form> 
 
-<hr> 
+ 
 
 <!-- caso não esteja logado tem que ter uma condição aqui -->
 <nav class="opcoes"> 
