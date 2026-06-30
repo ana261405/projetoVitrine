@@ -1,5 +1,5 @@
 <?php 
-require_once("../bancodedados/conexaoBanco.php"); 
+require_once("./bancodedados/conexaoBanco.php"); 
 
 class Produto{
     protected  $preco, $descricao, $nome, $imagem, $categoriaId;
@@ -19,9 +19,9 @@ class Produto{
         $categoria = "";
 
         if($this->categoriaId == 1){
-            $categoria = "<h3>Lanche</h3><br>";
+            $categoria = "<h2>Lanche</h2><br>";
         }else if($this->categoriaId == 3){
-            $categoria = "<h3>Porção</h3><br>";
+            $categoria = "<h2>Porção</h2><br>";
         }
 
         echo "<div class='produto'>
@@ -29,7 +29,7 @@ class Produto{
                 <h3>$this->nome</h3><br>
                 $this->descricao<br>
                 Preço: R$ $this->preco<br>
-                <img src='../$this->imagem'> <br> 
+                <img src='./$this->imagem'> <br> 
             </div>";
     }   
     

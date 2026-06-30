@@ -54,7 +54,6 @@ if(isset($_POST["nome"])){
     }
     $produto->salvar();
     //arrumar a impressão da mensagem 
-    //testar a propriedade de nome unico
     //fazer a busca no banco
     //fazer a autenticação do login e sumir com os botões
 }
