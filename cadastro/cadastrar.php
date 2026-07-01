@@ -4,6 +4,19 @@ include "../html/cabecalho.php"; ?>
 <h2 class= "bemvindo-cad">Bem vindo a página de cadastro</h2>
 <!-- caso não esteja logado tem que ter uma condição aqui *!!!* -->
 
+<?php
+if (isset($_GET['erro']) && $_GET['erro'] == 'duplicado') {
+    echo "<p id='mensagemErro' style='color:red'>Já existe um produto com esse nome. 
+                                                Tente adicionar outro produto.</p>";
+}
+if (isset($_GET['mensagem']) && $_GET['mensagem'] == 'sucesso') {
+    echo "<p id='mensagemSucesso' style='color:green'>Cadastro realizado com sucesso!</p>";
+}else if(isset($_GET['mensagem']) && $_GET['mensagem'] == 'erro'){
+    echo "<p id='mensagemErro' style='color:red'>Erro ao cadastrar. Entre em contato com a administração.</p>";
+}
+
+?>
+
 <!-- ao submeter esse form os campos vão seer validados, também poderia ser utilizado required, não me atentei-->  
 <form action="../bancodedados/processaCadastro.php" method="post"  class="cadastrar" id="cadastro" onsubmit="return validarForm()" enctype="multipart/form-data">
 <!-- essa label esta vinculada ao select com o id categoria -->
@@ -40,6 +53,7 @@ include "../html/cabecalho.php"; ?>
 <button type="submit" form="cadastro">Cadastrar</button>
 
 </form>
+
 
 <script src="../js/cadastro.js"> </script> 
 <?php include "../html/rodape.php"; ?>

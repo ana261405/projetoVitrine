@@ -5,11 +5,16 @@
         private $DB_USER = "root";
         private $DB_PASS = "";
         private $DB   = "projetoVitrine";
-        
+
         public $con;
+
+        
 
         public function __construct()
         {
+            //retira a função de tratar como exceção 
+            mysqli_report(MYSQLI_REPORT_OFF);
+
             $this->con = mysqli_connect($this->DB_HOST, $this->DB_USER, $this->DB_PASS) 
                 or die("Sem conexão com o servidor");
 

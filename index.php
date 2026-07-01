@@ -7,7 +7,7 @@ include "bancodedados/processaBusca.php"
 <h2>Itens da vitrine</h2>
 
 <?php
-buscarTodos();
+buscarTodosCategoria();
 ?>
 
 

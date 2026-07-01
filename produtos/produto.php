@@ -1,5 +1,5 @@
 <?php 
-require_once("./bancodedados/conexaoBanco.php"); 
+require_once(__DIR__ . "/../bancodedados/conexaoBanco.php");
 
 class Produto{
     protected  $preco, $descricao, $nome, $imagem, $categoriaId;
@@ -16,16 +16,7 @@ class Produto{
 
     public function imprimir(){
 
-        $categoria = "";
-
-        if($this->categoriaId == 1){
-            $categoria = "<h2>Lanche</h2><br>";
-        }else if($this->categoriaId == 3){
-            $categoria = "<h2>Porção</h2><br>";
-        }
-
         echo "<div class='produto'>
-                $categoria
                 <h3>$this->nome</h3><br>
                 $this->descricao<br>
                 Preço: R$ $this->preco<br>
@@ -42,25 +33,24 @@ class Produto{
         $descricao = $this->descricao; 
         $imagem = $this->imagem; 
         $categoriaId = $this->categoriaId;
-
-        $mensagem = ''; 
         
 
         $sql = "INSERT INTO produtos ( nome, descricao, preco, imagem, categoria)
                 VALUES ('$nome', '$descricao', '$preco', '$imagem', '$categoriaId')";
 
         if($banco->query($sql)){
-            $mensagem= "Cadastro realizado!";
-            //header("location:teste.php")
-            echo "<script> alert('Cadastro realizado com sucesso!') </script>";
+
+            header("Location: ../cadastro/cadastrar.php?mensagem=sucesso");
         }else{
             
              if (mysqli_errno($banco->con) == 1062) {
-                echo "Já existe um produto com esse nome.";
+                header("Location: ../cadastro/cadastrar.php?erro=duplicado");
+                exit;
             } else {
+                header("Location: ../cadastro/cadastrar.php?mensagem=erro");
                 echo "Erro ao cadastrar: " . mysqli_error($banco->con);
             }
-            echo "Erro ao cadastrar." . mysqli_error($banco->con);
+
         }
 
     }

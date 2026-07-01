@@ -17,7 +17,6 @@ class Bebida extends Produto{
 
     public function imprimir(){
         echo "<div class='produto'>" . 
-            "<h3>Bebida</h3> <br> " .
             "<h3> $this->nome </h3> <br> " . 
             "$this->descricao <br>" .
             "Preço: R$ $this->preco <br>".
@@ -53,6 +52,7 @@ class Bebida extends Produto{
 
             if($banco->query($sqlBebida)){
                echo "<script> alert('Cadastro realizado com sucesso!') </script>"; 
+               header("location: ../cadastro/cadastrar.php");
                
             }else{
                 echo "Erro ao cadastrar bebida: " . mysqli_error($banco->con);
